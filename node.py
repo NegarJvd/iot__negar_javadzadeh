@@ -1,4 +1,4 @@
-# import stddraw
+# Author: Negar Javadzadeh 975361009
 
 
 class Node:
@@ -7,6 +7,9 @@ class Node:
         self.x = _x
         self.y = _y
         self.neighbor_nodes = []
+        self.dist = None
+        self.prev = None
+        self.visited = None
 
     def __str__(self):
         return str(self.id) + ' => ' + '(' + str(self.x) + ', ' + str(self.y) + ')'
@@ -17,19 +20,8 @@ class Node:
     def add_neighbors_list(self, neighbors_list):
         self.neighbor_nodes += neighbors_list
 
-    # def draw_node(self):
-    #     stddraw.setPenRadius(0.01)
-    #
-    #     stddraw.setPenColor(stddraw.RED)
-    #     stddraw.point(self.x, self.y)
-    #     stddraw.show(200)
-    #
-    #     for neighbor in self.neighbor_nodes:
-    #         stddraw.setPenColor(stddraw.BLACK)
-    #         stddraw.point(neighbor.x, neighbor.y)
-    #         stddraw.show(200)
-    #
-    #         stddraw.line(self.x, self.y, neighbor.x, neighbor.y)
-    #         stddraw.show(200)
+    def add_x(self, x):
+        self.x = x
 
-# Negar Javadzadeh 975361009
+    def add_y(self, y):
+        self.y = y
